@@ -5,7 +5,7 @@ resource "aws_db_instance" "default" {
   engine_version       = "5.7"
   instance_class       = "db.t3.micro"
   username             = "root"
-  password             = "root2123"
+  password             = file("pass.txt")
   parameter_group_name = "default.mysql5.7"
   skip_final_snapshot  = true
 }
